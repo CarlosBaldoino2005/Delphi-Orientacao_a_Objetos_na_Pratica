@@ -1,0 +1,39 @@
+unit Regra.Parametros;
+
+interface
+
+uses
+  Regra.Interfaces;
+
+type
+  TRegraParametros = class(TInterfacedObject, iRegrasParametros)
+    private
+      [weak]
+      FParent : iRegras;
+    public
+      constructor Create(aParent : iRegras);
+      destructor Destroy; override;
+      class function New(aParent : iRegras) : iRegrasParametros;
+  end;
+
+implementation
+
+{ TRegraParametros }
+
+constructor TRegraParametros.Create(aParent: iRegras);
+begin
+  FParent := aParent;
+end;
+
+destructor TRegraParametros.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TRegraParametros.New(aParent: iRegras): iRegrasParametros;
+begin
+  Result := Self.Create(aParent);
+end;
+
+end.

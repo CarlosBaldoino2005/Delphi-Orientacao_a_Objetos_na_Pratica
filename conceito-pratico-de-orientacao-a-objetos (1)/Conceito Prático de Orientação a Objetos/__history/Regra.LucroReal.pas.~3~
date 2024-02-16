@@ -1,0 +1,24 @@
+unit Regra.LucroReal;
+
+interface
+
+uses
+  Regra;
+
+type
+  TRegraLucroReal = class(TRegra)
+    private
+    public
+      function Name : String; override;
+  end;
+
+implementation
+
+{ TRegraLucroReal }
+
+function TRegraLucroReal.Name: String;
+begin
+  Result := 'Lucro Real';
+end;
+
+end.

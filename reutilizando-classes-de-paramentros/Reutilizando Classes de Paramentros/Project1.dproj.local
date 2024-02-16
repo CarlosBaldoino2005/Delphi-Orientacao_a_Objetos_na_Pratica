@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/16 13:50:46.000.996,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/03/27 13:38:03.000.251,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 14:38:23.000.143,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/05/19 14:49:33.000.640,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2021/05/19 14:50:15.000.904,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit3.pas</Transaction>
+    <Transaction>2021/05/19 14:50:18.000.849,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit1.pas</Transaction>
+    <Transaction>2021/05/19 14:50:18.000.849,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit1.dfm</Transaction>
+    <Transaction>2021/05/19 14:50:21.000.261,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Project1.dproj</Transaction>
+    <Transaction>2021/05/19 14:50:31.000.616,C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit3.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Regra.SimplesNacional.pas</Transaction>
+    <Transaction>2021/05/19 14:51:22.000.417,=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 14:51:32.000.483,C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit2.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Regra.LucroPresumido.pas</Transaction>
+    <Transaction>2021/05/19 14:52:09.000.528,=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 14:52:18.000.260,C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit2.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Regra.LucroReal.pas</Transaction>
+    <Transaction>2021/05/19 14:56:27.000.129,=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 14:56:34.000.095,C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Unit2.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Conceito Prático de Orientação a Objetos\Regra.pas</Transaction>
+    <Transaction>2021/05/19 15:27:32.000.804,=C:\Users\thuli\Desktop\Orientação a Objetos\Fabrica de Objetos com Enumerados\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 15:27:38.000.726,C:\Users\thuli\Desktop\Orientação a Objetos\Fabrica de Objetos com Enumerados\Regra.Tipo.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Fabrica de Objetos com Enumerados\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 15:37:48.000.228,=C:\Users\thuli\Desktop\Orientação a Objetos\Interfaces vs Classe Abstrata\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 15:37:54.000.967,C:\Users\thuli\Desktop\Orientação a Objetos\Interfaces vs Classe Abstrata\Unit2.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Interfaces vs Classe Abstrata\Regra.Interfaces.pas</Transaction>
+    <Transaction>2021/05/19 15:41:04.000.112,C:\Users\thuli\Desktop\Orientação a Objetos\Interfaces vs Classe Abstrata\Regra.pas=</Transaction>
+    <Transaction>2021/05/19 16:19:01.000.965,=C:\Users\thuli\Desktop\Orientação a Objetos\Trabalhando Possibilidades na Refatoração\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 16:19:09.000.700,C:\Users\thuli\Desktop\Orientação a Objetos\Trabalhando Possibilidades na Refatoração\Regra.Controller.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Trabalhando Possibilidades na Refatoração\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 17:32:30.000.289,=C:\Users\thuli\Desktop\Orientação a Objetos\Evitando Re-Trabalho de Implementação\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 17:32:38.000.497,C:\Users\thuli\Desktop\Orientação a Objetos\Evitando Re-Trabalho de Implementação\Unit2.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Evitando Re-Trabalho de Implementação\Regra.Operacoes.pas</Transaction>
+    <Transaction>2021/05/19 17:59:57.014,=C:\Users\thuli\Desktop\Orientação a Objetos\Reutilizando Classes de Paramentros\Unit2.pas</Transaction>
+    <Transaction>2021/05/19 18:00:05.878,C:\Users\thuli\Desktop\Orientação a Objetos\Reutilizando Classes de Paramentros\Regra.Parametros.pas=C:\Users\thuli\Desktop\Orientação a Objetos\Reutilizando Classes de Paramentros\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

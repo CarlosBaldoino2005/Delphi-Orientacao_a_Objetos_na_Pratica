@@ -1,0 +1,61 @@
+unit Regra.Operacoes;
+
+interface
+
+uses
+  System.SysUtils,
+  Regra.Interfaces;
+
+type
+  TRegraOperacoes<T> = class(TInterfacedObject, iRegrasOperacoes<T>)
+    private
+      FDisplay : TProc<String>;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iRegrasOperacoes<T>;
+      function CalcularImposto ( aValue : Currency ) : Currency; overload;
+      function CalcularImposto ( aValue : String ) : Currency; overload;
+      function Display ( aValue : TProc<String> ) : iRegras;
+  end;
+
+implementation
+
+{ TRegraOperacoes }
+
+function TRegraOperacoes<T>.CalcularImposto(aValue: Currency): Currency;
+begin
+  Result := (aValue * 0.3) + aValue;
+
+  if Assigned(FDisplay) then
+    FDisplay(CurrToStr(Result));
+end;
+
+function TRegraOperacoes<T>.CalcularImposto(aValue: String): Currency;
+begin
+
+end;
+
+constructor TRegraOperacoes<T>.Create;
+begin
+
+end;
+
+destructor TRegraOperacoes<T>.Destroy;
+begin
+
+  inherited;
+end;
+
+function TRegraOperacoes<T>.Display(aValue: TProc<String>): iRegras;
+begin
+  Result := Self;
+  FDisplay := aValue;
+end;
+
+class function TRegraOperacoes<T>.New: iRegrasOperacoes<T>;
+begin
+  Result := Self.Create;
+end;
+
+end.

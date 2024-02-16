@@ -1,0 +1,21 @@
+unit Regra.LucroPresumido;
+
+interface
+
+type
+  TRegraLucroPresumido = class
+    private
+    public
+      function Name : String;
+  end;
+
+implementation
+
+{ TRegraLucroPresumido }
+
+function TRegraLucroPresumido.Name: String;
+begin
+  Result := 'Lucro Resumido';
+end;
+
+end.

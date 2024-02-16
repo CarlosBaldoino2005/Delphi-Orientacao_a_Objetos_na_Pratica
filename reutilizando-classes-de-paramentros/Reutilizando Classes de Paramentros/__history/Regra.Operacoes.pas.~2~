@@ -1,0 +1,34 @@
+unit Regra.Operacoes;
+
+interface
+
+type
+  TRegraOperacoes = class(TInterfacedObject, iRegrasOperacoes)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iRegrasOperacoes;
+  end;
+
+implementation
+
+{ TRegraOperacoes }
+
+constructor TRegraOperacoes.Create;
+begin
+
+end;
+
+destructor TRegraOperacoes.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TRegraOperacoes.New: iRegrasOperacoes;
+begin
+  Result := Self.Create;
+end;
+
+end.

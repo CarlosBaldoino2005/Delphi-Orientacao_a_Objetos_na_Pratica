@@ -1,0 +1,91 @@
+unit Regra.Operacoes;
+
+interface
+
+uses
+  System.SysUtils,
+  Regra.Interfaces;
+
+type
+  TRegraOperacoes = class(TInterfacedObject, iRegrasOperacoes)
+    private
+      [weak]
+      FParent : iRegras;
+    public
+      constructor Create(aParent : iRegras) ;
+      destructor Destroy; override;
+      class function New(aParent : iRegras) : iRegrasOperacoes;
+      function CalcularImposto ( aValue : Currency ) : Currency; overload;
+      function CalcularImposto ( aValue : String ) : Currency; overload;
+      function CalcularImpostoST ( aValue : Currency ) : Currency; overload;
+      function CalcularImpostoST ( aValue : String ) : Currency; overload;
+      function CalcularISS ( aValue : Currency ) : Currency; overload;
+      function CalcularISS ( aValue : String ) : Currency; overload;
+  end;
+
+implementation
+
+{ TRegraOperacoes }
+
+function TRegraOperacoes.CalcularImposto(aValue: Currency): Currency;
+begin
+  Result := (aValue * FParent.Parametros.PercentImposto) + aValue;
+
+  if Assigned(FParent.Parametros.Display) then
+    FParent.Parametros.Display()(CurrToStr(Result));
+end;
+
+function TRegraOperacoes.CalcularImposto(aValue: String): Currency;
+begin
+  Result := 0;
+  if TryStrToCurr(aValue, Result) then
+    Result := CalcularImposto(StrToCurr(aValue));
+end;
+
+function TRegraOperacoes.CalcularImpostoST(aValue: String): Currency;
+begin
+  Result := 0;
+  if TryStrToCurr(aValue, Result) then
+    Result := CalcularImpostoST(StrToCurr(aValue));
+end;
+
+function TRegraOperacoes.CalcularISS(aValue: String): Currency;
+begin
+  Result := 0;
+  if TryStrToCurr(aValue, Result) then
+    Result := CalcularISS(StrToCurr(aValue));
+end;
+
+function TRegraOperacoes.CalcularISS(aValue: Currency): Currency;
+begin
+  Result := (aValue * FParent.Parametros.PercentImpostoISS) + aValue;
+
+  if Assigned(FParent.Parametros.Display) then
+    FParent.Parametros.Display()(CurrToStr(Result));
+end;
+
+function TRegraOperacoes.CalcularImpostoST(aValue: Currency): Currency;
+begin
+  Result := ((aValue * FParent.Parametros.PercentImposto) - (aValue * FParent.Parametros.PercentImpostoST)) + aValue;
+
+  if Assigned(FParent.Parametros.Display) then
+    FParent.Parametros.Display()(CurrToStr(Result));
+end;
+
+constructor TRegraOperacoes.Create(aParent : iRegras) ;
+begin
+  FParent := aParent;
+end;
+
+destructor TRegraOperacoes.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TRegraOperacoes.New(aParent : iRegras) : iRegrasOperacoes;
+begin
+  Result := Self.Create(aParent);
+end;
+
+end.

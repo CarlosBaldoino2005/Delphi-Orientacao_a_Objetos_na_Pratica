@@ -1,0 +1,47 @@
+unit Regra.Controller;
+
+interface
+
+uses
+  Regra.Interfaces,
+  System.Generics.Collections;
+
+type
+  TRegraController = class(TInterfacedObject, iRegrasController)
+    private
+      FListRegras : TDictionary<Integer, String>;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iRegrasController;
+      function Registry ( aKey : Integer; aValue : String ) : iRegrasController;
+  end;
+
+implementation
+
+{ TRegraController }
+
+constructor TRegraController.Create;
+begin
+  FListRegras := TDictionary<Integer, String>.Create;
+end;
+
+destructor TRegraController.Destroy;
+begin
+  FListRegras.Free;
+  inherited;
+end;
+
+class function TRegraController.New: iRegrasController;
+begin
+  Result := Self.Create;
+end;
+
+function TRegraController.Registry(aKey: Integer;
+  aValue: String): iRegrasController;
+begin
+  Result := Self;
+  FListRegras.Add(aKey, aValue);
+end;
+
+end.

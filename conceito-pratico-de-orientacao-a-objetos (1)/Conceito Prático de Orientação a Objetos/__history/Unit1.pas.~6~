@@ -1,0 +1,72 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls,
+  Regra.SimplesNacional,
+  Regra.LucroPresumido, Regra.LucroReal, Regra;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    ComboBox1: TComboBox;
+    Memo1: TMemo;
+    procedure ComboBox1Change(Sender: TObject);
+  private
+    { Private declarations }
+    FRegra : TRegra;
+    procedure RecebeRegra(aValue: TRegraSimplesNacional);
+    procedure RecebeRegra(aValue: TRegraLucroPresumido);
+    procedure RecebeRegra(aValue: TRegraLucroReal);
+  public
+    { Public declarations }
+    procedure RecebeRegra ( aValue : TRegra ); overload;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.RecebeRegra(aValue: TRegraSimplesNacional);
+begin
+  Memo1.Lines.Add(aValue.Name);
+end;
+
+procedure TForm1.RecebeRegra(aValue: TRegraLucroPresumido);
+begin
+  Memo1.Lines.Add(aValue.Name);
+end;
+
+procedure TForm1.ComboBox1Change(Sender: TObject);
+begin
+  case ComboBox1.ItemIndex of
+    0 :  FRegra := TRegraSimplesNacional.Create;
+    1 :  FRegra := TRegraLucroPresumido.Create;
+    2 :  FRegra := TRegraLucroReal.Create;
+  end;
+end;
+
+procedure TForm1.RecebeRegra(aValue: TRegraLucroReal);
+begin
+  Memo1.Lines.Add(aValue.Name);
+end;
+
+procedure TForm1.RecebeRegra(aValue: TRegra);
+begin
+  Memo1.Lines.Add(aValue.Name);
+end;
+
+end.
